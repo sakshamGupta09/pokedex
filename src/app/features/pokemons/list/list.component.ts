@@ -1,4 +1,5 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
+import { IPokemon } from '../models/pokemon';
 
 @Component({
   selector: 'app-list',
@@ -8,4 +9,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   styleUrl: './list.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ListComponent {}
+export class ListComponent {
+  protected pokemons = signal<IPokemon[]>([]);
+}
