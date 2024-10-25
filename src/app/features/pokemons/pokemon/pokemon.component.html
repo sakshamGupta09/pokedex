@@ -1,0 +1,7 @@
+<div class="pokemon">
+  <div class="pokemon__image-container">
+    <img [src]="pokemonImage.PREFIX + pokemon().name + pokemonImage.EXTENSION" [alt]="pokemon().name"
+      class="pokemon__image" />
+  </div>
+  <p class="pokemon__title">{{ pokemon().name }}</p>
+</div>
