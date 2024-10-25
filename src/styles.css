@@ -2,10 +2,12 @@
 
 :root {
   --body-bg: #dfdbe5;
+  --card-bg: #fff;
 }
 
 body.dark {
-  --body-bg: #262626;
+  --body-bg: #000;
+  --card-bg: #1b1f23;
 }
 
 body {

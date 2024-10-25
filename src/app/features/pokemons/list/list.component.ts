@@ -1,5 +1,12 @@
-import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  inject,
+  OnInit,
+  signal,
+} from '@angular/core';
 import { IPokemon } from '../models/pokemon';
+import { PokemonService } from '../services/pokemon.service';
 
 @Component({
   selector: 'app-list',
@@ -9,6 +16,22 @@ import { IPokemon } from '../models/pokemon';
   styleUrl: './list.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ListComponent {
+export class ListComponent implements OnInit {
   protected pokemons = signal<IPokemon[]>([]);
+
+  private pokemonService = inject(PokemonService);
+
+  ngOnInit(): void {
+    this.fetchPokemons();
+  }
+
+  private fetchPokemons(): void {
+    this.pokemonService.getPokemons().subscribe({
+      next: (response) => {
+        if (response && Array.isArray(response.results)) {
+        }
+      },
+      error: () => {},
+    });
+  }
 }
