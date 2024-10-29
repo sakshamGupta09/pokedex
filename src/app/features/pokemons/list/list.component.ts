@@ -35,7 +35,12 @@ export class ListComponent implements OnInit {
     this.pokemonService.getPokemons().subscribe({
       next: (response) => {
         if (response && Array.isArray(response.results)) {
-          this.pokemons.set(response.results);
+          this.pokemons.set(
+            response.results.map((pokemon) => ({
+              name: pokemon.name,
+              id: this.getPokemonIdFromUrl(pokemon.url),
+            }))
+          );
         }
         this.isLoading.set(false);
       },
@@ -43,5 +48,16 @@ export class ListComponent implements OnInit {
         this.isLoading.set(false);
       },
     });
+  }
+
+  private getPokemonIdFromUrl(url: string): number {
+    let id = '';
+    for (let i = url.length - 2; i >= 0; i--) {
+      if (url[i] === '/') {
+        break;
+      }
+      id = url[i] + id;
+    }
+    return +id;
   }
 }

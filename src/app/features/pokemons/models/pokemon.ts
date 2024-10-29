@@ -1,9 +1,9 @@
 export interface IPokemon {
   name: string;
-  url: string;
+  id: number;
 }
 
 export interface IGetPokemonResponse {
   count: number;
-  results: IPokemon[];
+  results: { name: string; url: string }[];
 }

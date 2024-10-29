@@ -1,5 +1,5 @@
 <section class="pokemons">
-  @for (pokemon of pokemons(); track pokemon.name) {
+  @for (pokemon of pokemons(); track pokemon.id) {
   <app-pokemon [pokemon]="pokemon" />
   } @empty {
   <app-no-pokemons-found />
