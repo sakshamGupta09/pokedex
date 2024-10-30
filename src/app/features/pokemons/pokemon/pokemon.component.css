@@ -1,10 +1,12 @@
 .pokemon {
-  border: 1px solid #0000001a;
-  border-radius: 0.25rem;
+  border-radius: 1rem;
+  background-color: var(--card-bg);
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  overflow: hidden;
+  cursor: pointer;
 
   .pokemon__image-container {
-    background: #ecececb3;
-    padding: 0.5rem;
+    background: rgb(187 247 208);
     height: 20rem;
   }
 
@@ -14,7 +16,12 @@
     object-fit: contain;
   }
 
-  &:hover {
-    border-color: #0000005f;
+  .pokemon__title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    text-align: center;
+    color: var(--text-color);
   }
 }

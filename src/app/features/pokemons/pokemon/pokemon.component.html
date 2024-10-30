@@ -3,5 +3,7 @@
     <img [src]="pokemonImage.PREFIX + pokemon().id + pokemonImage.EXTENSION" [alt]="pokemon().name"
       class="pokemon__image" />
   </div>
-  <p class="pokemon__title">{{ pokemon().name }}</p>
+  <div class="pokemon__content">
+    <p class="pokemon__title">{{ pokemon().name }}</p>
+  </div>
 </div>

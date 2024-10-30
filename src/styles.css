@@ -3,11 +3,13 @@
 :root {
   --body-bg: #dfdbe5;
   --card-bg: #fff;
+  --text-color: #282c3f;
 }
 
 body.dark {
-  --body-bg: #000;
-  --card-bg: #1b1f23;
+  --body-bg: #18181b;
+  --card-bg: #2E323F;
+  --text-color: #d1d7e0;
 }
 
 body {
