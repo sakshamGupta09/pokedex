@@ -5,10 +5,10 @@ import {
   OnInit,
   signal,
 } from '@angular/core';
-import { IPokemon } from '../models/pokemon';
-import { PokemonService } from '../services/pokemon.service';
-import { PokemonComponent } from '../pokemon/pokemon.component';
-import { NoPokemonsFoundComponent } from '../no-pokemons-found/no-pokemons-found.component';
+import { PokemonService } from '../../services/pokemon.service';
+import { IPokemon } from '../../models/pokemon';
+import { PokemonComponent } from '../../components/pokemon/pokemon.component';
+import { NoPokemonsFoundComponent } from '../../components/no-pokemons-found/no-pokemons-found.component';
 
 @Component({
   selector: 'app-list',

@@ -5,12 +5,14 @@ export const POKEMON_ROUTES: Routes = [
     path: '',
     title: 'Pokemon List',
     loadComponent: () =>
-      import('./list/list.component').then((m) => m.ListComponent),
+      import('./pages/list/list.component').then((m) => m.ListComponent),
   },
   {
     path: 'details/:id',
     title: 'Pokemon Details',
     loadComponent: () =>
-      import('./details/details.component').then((m) => m.DetailsComponent),
+      import('./pages/details/details.component').then(
+        (m) => m.DetailsComponent
+      ),
   },
 ];

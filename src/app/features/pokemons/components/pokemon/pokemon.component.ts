@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, input } from '@angular/core';
-import { IPokemon } from '../models/pokemon';
+import { IPokemon } from '../../models/pokemon';
 import { POKEMON_IMAGE } from '@app/constants/pokemon-image-url';
 
 @Component({
