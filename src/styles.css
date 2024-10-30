@@ -1,14 +1,18 @@
+@import "./styles/input.css";
+@import "./styles/utils.css";
+@import "./styles/spacing.css";
+
 /* Variables */
 
 :root {
   --body-bg: #dfdbe5;
-  --card-bg: #fff;
+  --surface-bg: #fff;
   --text-color: #282c3f;
 }
 
 body.dark {
   --body-bg: #18181b;
-  --card-bg: #2E323F;
+  --surface-bg: #2e323f;
   --text-color: #d1d7e0;
 }
 

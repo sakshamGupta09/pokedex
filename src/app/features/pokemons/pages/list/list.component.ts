@@ -9,11 +9,12 @@ import { PokemonService } from '../../services/pokemon.service';
 import { IPokemon } from '../../models/pokemon';
 import { PokemonComponent } from '../../components/pokemon/pokemon.component';
 import { NoPokemonsFoundComponent } from '../../components/no-pokemons-found/no-pokemons-found.component';
+import { SearchComponent } from '../../components/search/search.component';
 
 @Component({
   selector: 'app-list',
   standalone: true,
-  imports: [PokemonComponent, NoPokemonsFoundComponent],
+  imports: [PokemonComponent, NoPokemonsFoundComponent, SearchComponent],
   templateUrl: './list.component.html',
   styleUrl: './list.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,

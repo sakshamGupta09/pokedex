@@ -1,13 +1,13 @@
 .pokemon {
   border-radius: 1rem;
-  background-color: var(--card-bg);
+  background-color: var(--surface-bg);
   box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   overflow: hidden;
   cursor: pointer;
 
   .pokemon__image-container {
     background: rgb(187 247 208);
-    height: 20rem;
+    height: 18rem;
   }
 
   .pokemon__image {
